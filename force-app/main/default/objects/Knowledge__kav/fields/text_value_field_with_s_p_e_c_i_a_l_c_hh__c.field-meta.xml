@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>text_value_field_with_s_p_e_c_i_a_l_c_hh__c</fullName>
+    <description>label: text(value)--field--=with__special*&amp;^cha
+devname: text_value_field_with_s_p_e_c_i_a_l_c_h_a</description>
+    <label>text(value)--field--=with__special*&amp;^cha</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>field_with_a_very_long_name_test_home_1__c</fullName>
+    <description>field_with_a_very_long_name_test_home_1</description>
+    <inlineHelpText>field_with_a_very_long_name_test_home_1</inlineHelpText>
+    <label>field_with_a_very_long_name_test_home_1</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

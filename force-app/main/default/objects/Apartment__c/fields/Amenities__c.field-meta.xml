@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amenities__c</fullName>
+    <label>Amenities</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Patio</fullName>
+                <default>false</default>
+                <label>Patio</label>
+            </value>
+            <value>
+                <fullName>Washer/Dryer</fullName>
+                <default>false</default>
+                <label>Washer/Dryer</label>
+            </value>
+            <value>
+                <fullName>Swimming Pool</fullName>
+                <default>false</default>
+                <label>Swimming Pool</label>
+            </value>
+            <value>
+                <fullName>Central AC</fullName>
+                <default>false</default>
+                <label>Central AC</label>
+            </value>
+            <value>
+                <fullName>Hardwood Floors</fullName>
+                <default>false</default>
+                <label>Hardwood Floors</label>
+            </value>
+            <value>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+                <label>Fitness Center</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

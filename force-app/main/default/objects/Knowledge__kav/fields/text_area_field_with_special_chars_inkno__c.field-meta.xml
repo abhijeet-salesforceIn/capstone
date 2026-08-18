@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>text_area_field_with_special_chars_inkno__c</fullName>
+    <label>text area field with special chars __-in</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

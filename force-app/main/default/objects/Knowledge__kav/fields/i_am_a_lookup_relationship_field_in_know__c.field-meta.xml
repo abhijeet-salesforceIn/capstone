@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>i_am_a_lookup_relationship_field_in_know__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>i_am_a_lookup_relationship_field_in_know</label>
+    <referenceTo>SocialPost</referenceTo>
+    <relationshipLabel>Social Post</relationshipLabel>
+    <relationshipName>socialpost</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

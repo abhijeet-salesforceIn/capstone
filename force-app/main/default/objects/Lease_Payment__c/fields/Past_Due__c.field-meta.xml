@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Past_Due__c</fullName>
+    <formula>AND(
+  NOT(ISBLANK(Date_Paid__c)),
+  NOT(ISBLANK(Date_Due__c)),
+  Date_Paid__c &gt; Date_Due__c,
+  Date_Paid__c &lt; TODAY(),
+  Date_Due__c &lt; TODAY()
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Past Due</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

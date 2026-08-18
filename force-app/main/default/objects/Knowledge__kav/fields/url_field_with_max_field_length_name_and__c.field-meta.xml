@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>url_field_with_max_field_length_name_and__c</fullName>
+    <label>url field with max field length name and</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

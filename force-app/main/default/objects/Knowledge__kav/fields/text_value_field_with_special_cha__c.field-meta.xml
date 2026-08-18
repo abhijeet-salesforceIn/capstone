@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>text_value_field_with_special_cha__c</fullName>
+    <description>text(value)--field--=with__special*&amp;^cha</description>
+    <inlineHelpText>text(value)--field--=with__special*&amp;^cha</inlineHelpText>
+    <label>text(value)--field--=with__special*&amp;^cha</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

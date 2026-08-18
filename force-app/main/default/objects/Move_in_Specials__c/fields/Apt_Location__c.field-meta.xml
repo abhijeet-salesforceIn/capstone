@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apt_Location__c</fullName>
+    <label>Apt Location</label>
+    <referenceTo>Apt_Location__c</referenceTo>
+    <relationshipLabel>Move in Specials</relationshipLabel>
+    <relationshipName>Move_in_Specials</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

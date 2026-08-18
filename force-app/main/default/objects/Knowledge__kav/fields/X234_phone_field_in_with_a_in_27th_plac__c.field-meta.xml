@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X234_phone_field_in_with_a_in_27th_plac__c</fullName>
+    <label>X234 phone field in with a_ in 27th plac</label>
+    <required>false</required>
+    <type>Phone</type>
+</CustomField>

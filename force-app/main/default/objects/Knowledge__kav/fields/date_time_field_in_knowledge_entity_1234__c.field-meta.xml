@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>date_time_field_in_knowledge_entity_1234__c</fullName>
+    <label>date_time_field_in_knowledge_entity_1234</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>
