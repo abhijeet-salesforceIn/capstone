@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Public-facing leasing assistant for Pacific Haven Properties. Captures leads, qualifies prospects, answers property questions, and escalates urgent requests.</description>
+    <localTopicLinks>
+        <genAiPluginName>GeneralFAQ_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Property_Search_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16joB000000DAHh</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>agent_router_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179oB000000Qz4f</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4f</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>GeneralFAQ_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Answers questions about Pacific Haven Properties&apos; policies, amenities, pet rules, guest policies, lease terms, security deposits, bicycle storage, and maintenance procedures using the Tenant Handbook.</description>
+        <developerName>GeneralFAQ_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.</description>
+            <developerName>instruction0_179oB000000Qz4g</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4g</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithAgenticRetriever_179oB000000Qz4g</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>AnswerQuestionsWithAgenticRetriever_179oB000000Qz4g</fullName>
+            <description>Answers questions by retrieving grounding content from an Agentforce Data Library (ADL). Runs an agentic loop that decomposes the question into focused sub-queries, retrieves chunks for each via the RETRIEVER platform action, and composes the final answer from the retrieved content.</description>
+            <developerName>AnswerQuestionsWithAgenticRetriever_179oB000000Qz4g</developerName>
+            <invocationTarget>answerQuestionsWithAgenticRetriever</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithAgenticRetriever</localDeveloperName>
+            <masterLabel>Answer Questions with Agentic Retriever</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithAgenticRetriever</source>
+        </localActions>
+        <localDeveloperName>GeneralFAQ</localDeveloperName>
+        <masterLabel>General FAQ</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.</description>
+            <developerName>instruction0_179oB000000Qz4h</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4h</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Property_Search_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles all apartment availability inquiries, pricing, lead capture, discount/move-in specials, and urgent move-in requests for prospective tenants.</description>
+        <developerName>Property_Search_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.</description>
+            <developerName>instruction0_179oB000000Qz4i</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4i</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Get_Available_Apartments_179oB000000Qz4i</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Lead_Record_179oB000000Qz4i</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_Move_In_Specials_179oB000000Qz4i</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Lead_Record_179oB000000Qz4i</fullName>
+            <description>Creates a Lead record in Salesforce to capture a prospective tenant&apos;s contact information. Only use this action AFTER you have successfully searched for and presented available apartments to the user, and have politely asked for their details to keep them updated.</description>
+            <developerName>Create_Lead_Record_179oB000000Qz4i</developerName>
+            <invocationTarget>Create_Lead_Record</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Lead_Record</localDeveloperName>
+            <masterLabel>Create Lead Record</masterLabel>
+            <source>Create_Lead_Record</source>
+        </localActions>
+        <localActions>
+            <fullName>Get_Move_In_Specials_179oB000000Qz4i</fullName>
+            <description>Use this action whenever a user asks for a discount, move-in special, or attempts to negotiate the rent price. It checks the database for active specials based on their desired city and bedroom count.&quot;</description>
+            <developerName>Get_Move_In_Specials_179oB000000Qz4i</developerName>
+            <invocationTarget>Get_Move_In_Specials</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Move_In_Specials</localDeveloperName>
+            <masterLabel>Get Move In Specials</masterLabel>
+            <source>Get_Move_In_Specials</source>
+        </localActions>
+        <localActions>
+            <fullName>Get_Available_Apartments_179oB000000Qz4i</fullName>
+            <description>Searches the Salesforce database for available apartments based on the user&apos;s desired city, maximum rent, and number of bedrooms. Returns up to 3 available apartments. Use this action whenever a user asks about apartment availability, pricing, or locations.</description>
+            <developerName>Get_Available_Apartments_179oB000000Qz4i</developerName>
+            <invocationTarget>Get_Available_Apartments</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Available_Apartments</localDeveloperName>
+            <masterLabel>Get Available Apartments</masterLabel>
+            <source>Get_Available_Apartments</source>
+        </localActions>
+        <localDeveloperName>Property_Search</localDeveloperName>
+        <masterLabel>Property Search</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.</description>
+            <developerName>instruction0_179oB000000Qz4j</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4j</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>escalation_16joB000000DAHh</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles all transfers to a live human leasing agent — whether the user explicitly requests one or has an urgent move-in timeline and agrees to be connected.</description>
+        <developerName>escalation_16joB000000DAHh</developerName>
+        <genAiPluginInstructions>
+            <description>You are a leasing assistant for Pacific Haven Properties. Help prospective tenants find available apartments, answer questions about policies and amenities from the Tenant Handbook, capture contact details to create leads, and escalate urgent requests to a human agent.</description>
+            <developerName>instruction0_179oB000000Qz4k</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000Qz4k</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Leasing Assistant</masterLabel>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <outboundRouteConfigs>
+            <escalationMessage>Redirecting to human agent...</escalationMessage>
+            <outboundRouteName>Route_Work_to_Human_Agent</outboundRouteName>
+            <outboundRouteType>OmniChannelFlow</outboundRouteType>
+        </outboundRouteConfigs>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

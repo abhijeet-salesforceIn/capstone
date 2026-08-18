@@ -1,0 +1,30 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_LatePaymentCount" : {
+      "title" : "var_LatePaymentCount",
+      "description" : "Total count of lease payments where Past_Due__c is true for the tenant.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "var_RenewalAction" : {
+      "title" : "var_RenewalAction",
+      "description" : "Recommended renewal path (WARM_RENEWAL for 0 late payments, TEN_PERCENT_INCREASE for 1-3 late payments, or NO_RENEWAL for >3 late payments).",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "var_TotalCaseCount" : {
+      "title" : "var_TotalCaseCount",
+      "description" : "Total count of maintenance cases logged for the tenant Account.",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

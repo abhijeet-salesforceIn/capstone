@@ -1,0 +1,30 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_AuthenticationKey" : {
+      "title" : "var_AuthenticationKey",
+      "description" : "tores the authentication key that's used to generate the verification code",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    },
+    "var_VarificationMessage" : {
+      "title" : "var_VarificationMessage",
+      "description" : "Confirmation message sent to the tenant indicating that the verification code was dispatched.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "var_verificationCode" : {
+      "title" : "var_verificationCode",
+      "description" : "Stores the generated verification code.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <localTopicLinks>
+        <genAiPluginName>Maintenance_Support_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ServiceCustomerVerification_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16joB000000Cwhl</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>off_topic_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QXrd</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXrd</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ServiceCustomerVerification_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Verifies the customer&apos;s identity before granting access to sensitive data. Verification is required for inquiries related to orders and order status, deliveries, reservations, password resets, account management (e.g. contact information updates), or cases. Sensitive data includes confidential, private, or security-protected information, such as business-critical data or personally identifiable information (PII).</description>
+        <developerName>ServiceCustomerVerification_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QXrc</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXrc</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>VerifyCustomer_179oB000000QXrc</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>SendEmailVerificationCode_179oB000000QXrc</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>SendEmailVerificationCode_179oB000000QXrc</fullName>
+            <description>Sends a generated verification code to the user’s email address.</description>
+            <developerName>SendEmailVerificationCode_179oB000000QXrc</developerName>
+            <invocationTarget>SvcCopilotTmpl__SendVerificationCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>SendEmailVerificationCode</localDeveloperName>
+            <masterLabel>Send Email with Verification Code</masterLabel>
+            <source>SvcCopilotTmpl__SendEmailVerificationCode</source>
+        </localActions>
+        <localActions>
+            <fullName>VerifyCustomer_179oB000000QXrc</fullName>
+            <description>Verifies whether the verification code entered by the user matches the code sent to the user&apos;s email address.</description>
+            <developerName>VerifyCustomer_179oB000000QXrc</developerName>
+            <invocationTarget>SvcCopilotTmpl__VerifyCode</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>VerifyCustomer</localDeveloperName>
+            <masterLabel>Verify Customer</masterLabel>
+            <source>SvcCopilotTmpl__VerifyCustomer</source>
+        </localActions>
+        <localDeveloperName>ServiceCustomerVerification</localDeveloperName>
+        <masterLabel>Service Customer Verification</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179oB000000QXrb</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXrb</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QXra</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXra</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>escalation_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QXrZ</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXrZ</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Create_Maintenance_Case_179oB000000QXrZ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Maintenance_Case_179oB000000QXrZ</fullName>
+            <description>Creates a support case for a tenant&apos;s maintenance issue after troubleshooting has failed. It checks past history and returns a recommendation if the issue is recurring.</description>
+            <developerName>Create_Maintenance_Case_179oB000000QXrZ</developerName>
+            <invocationTarget>Create_Maintenance_Case</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Maintenance_Case</localDeveloperName>
+            <masterLabel>Create Maintenance Case</masterLabel>
+        </localActions>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Maintenance_Support_16joB000000Cwhl</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles all tenant maintenance requests, home troubleshooting (like plumbing or power issues), and creates support cases for unresolved problems.</description>
+        <developerName>Maintenance_Support_16joB000000Cwhl</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QXre</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QXre</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Create_Maintenance_Case_179oB000000QXre</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179oB000000QXre</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Maintenance_Case_179oB000000QXre</fullName>
+            <description>Creates a support case for a tenant&apos;s maintenance issue after troubleshooting has failed. It checks past history and returns a recommendation if the issue is recurring.</description>
+            <developerName>Create_Maintenance_Case_179oB000000QXre</developerName>
+            <invocationTarget>Create_Maintenance_Case</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Maintenance_Case</localDeveloperName>
+            <masterLabel>Create Maintenance Case</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179oB000000QXre</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179oB000000QXre</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localDeveloperName>Maintenance_Support</localDeveloperName>
+        <masterLabel>Maintenance Support</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Tenant Concierge Agent</masterLabel>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <outboundRouteConfigs>
+            <escalationMessage>Adding human agent please wait...</escalationMessage>
+            <outboundRouteName>Route_Work_to_Human_Agent</outboundRouteName>
+            <outboundRouteType>OmniChannelFlow</outboundRouteType>
+        </outboundRouteConfigs>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

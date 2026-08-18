@@ -1,0 +1,22 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_VerificationMessage" : {
+      "title" : "var_VerificationMessage",
+      "description" : "Status message indicating whether the tenant verification succeeded or failed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    },
+    "var_isVerified" : {
+      "title" : "var_isVerified",
+      "description" : "Boolean flag returning True if the entered code is valid and matched, or False if invalid.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

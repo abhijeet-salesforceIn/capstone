@@ -1,0 +1,14 @@
+{
+  "required" : [ "var_AccountId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_AccountId" : {
+      "title" : "var_AccountId",
+      "description" : "The 18-character Salesforce Account ID of the tenant / Person Account record being evaluated.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

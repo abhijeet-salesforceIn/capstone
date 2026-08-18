@@ -1,0 +1,28 @@
+{
+  "required" : [ "var_ContactId", "var_IssueDescription", "var_IssueType" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_ContactId" : {
+      "title" : "var_ContactId",
+      "description" : "The Salesforce Contact ID of the logged-in user. Do not ask the user for this, retrieve it from the user context.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_IssueDescription" : {
+      "title" : "var_IssueDescription",
+      "description" : "The full description of the maintenance issue exactly as described by the tenant.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_IssueType" : {
+      "title" : "var_IssueType",
+      "description" : "A short, 1-2 word category or subject of the issue (e.g., 'Plumbing', 'Power', 'Appliance').",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
