@@ -1,0 +1,21 @@
+{
+  "required" : [ "var_UserId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_KeyfobRequestBody" : {
+      "title" : "var_KeyfobRequestBody",
+      "description" : "Automated HTTP request body payload for the SmartRent keyfob API callout (constructed internally by the underlying flow).",
+      "lightning:type" : "@apexClassType/ExternalService__c__OrderSmartRentKeyfob_Orderx20SmartRentx20Keyfob_IN_body",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_UserId" : {
+      "title" : "var_UserId",
+      "description" : "User ID",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

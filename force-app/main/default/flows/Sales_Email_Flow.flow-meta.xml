@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Open</accessType>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Sales_Email_Prompt</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Sales_Email_Prompt</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Sender : {!$Input.Recipient.Name}
+
+Account :{!$Input.RelatedObject.Name}
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>Sales_Email_Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales_Email_Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <capabilityTypes>
+            <name>PromptTemplateType://einstein_gpt__salesEmail</name>
+            <capabilityName>PromptTemplateType://einstein_gpt__salesEmail</capabilityName>
+            <inputs>
+                <name>Sender</name>
+                <capabilityInputName>Sender</capabilityInputName>
+                <dataType>SOBJECT://User</dataType>
+                <isCollection>false</isCollection>
+            </inputs>
+            <inputs>
+                <name>Recipient</name>
+                <capabilityInputName>Recipient</capabilityInputName>
+                <dataType>SOBJECT://Contact</dataType>
+                <isCollection>false</isCollection>
+            </inputs>
+            <inputs>
+                <name>RelatedObject</name>
+                <capabilityInputName>RelatedObject</capabilityInputName>
+                <dataType>SOBJECT://Account</dataType>
+                <isCollection>false</isCollection>
+            </inputs>
+        </capabilityTypes>
+        <connector>
+            <targetReference>Sales_Email_Prompt</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+</Flow>

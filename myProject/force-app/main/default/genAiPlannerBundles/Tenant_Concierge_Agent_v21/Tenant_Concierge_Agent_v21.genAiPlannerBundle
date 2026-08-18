@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <localTopicLinks>
+        <genAiPluginName>Maintenance_Support_16joB000000CyGX</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16joB000000CyGX</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16joB000000CyGX</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16joB000000CyGX</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16joB000000CyGX</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>escalation_16joB000000CyGX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16joB000000CyGX</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QZtR</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QZtR</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Create_Maintenance_Case_179oB000000QZtR</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Maintenance_Case_179oB000000QZtR</fullName>
+            <description>Creates a support case for a tenant&apos;s maintenance issue after troubleshooting has failed. It checks past history and returns a recommendation if the issue is recurring.</description>
+            <developerName>Create_Maintenance_Case_179oB000000QZtR</developerName>
+            <invocationTarget>Create_Maintenance_Case</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Maintenance_Case</localDeveloperName>
+            <masterLabel>Create Maintenance Case</masterLabel>
+        </localActions>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16joB000000CyGX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16joB000000CyGX</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179oB000000QZtQ</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QZtQ</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16joB000000CyGX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16joB000000CyGX</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QZtP</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QZtP</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Maintenance_Support_16joB000000CyGX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles all tenant maintenance requests, home troubleshooting (like plumbing or power issues), and creates support cases for unresolved problems.</description>
+        <developerName>Maintenance_Support_16joB000000CyGX</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QZtO</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QZtO</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>AnswerQuestionsWithKnowledge_179oB000000QZtO</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Send_Verification_Code_179oB000000QZtO</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Verify_Customer_Code_179oB000000QZtO</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Create_Maintenance_Case_179oB000000QZtO</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Create_Maintenance_Case_179oB000000QZtO</fullName>
+            <description>Creates a support case for a tenant&apos;s maintenance issue after troubleshooting has failed. It checks past history and returns a recommendation if the issue is recurring.</description>
+            <developerName>Create_Maintenance_Case_179oB000000QZtO</developerName>
+            <invocationTarget>Create_Maintenance_Case</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Create_Maintenance_Case</localDeveloperName>
+            <masterLabel>Create Maintenance Case</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>Verify_Customer_Code_179oB000000QZtO</fullName>
+            <description>Verify the customer code entered by used</description>
+            <developerName>Verify_Customer_Code_179oB000000QZtO</developerName>
+            <invocationTarget>Verify_Customer_Code</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>true</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Verify_Customer_Code</localDeveloperName>
+            <masterLabel>Verify Customer Code</masterLabel>
+        </localActions>
+        <localActions>
+            <fullName>AnswerQuestionsWithKnowledge_179oB000000QZtO</fullName>
+            <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+            <developerName>AnswerQuestionsWithKnowledge_179oB000000QZtO</developerName>
+            <invocationTarget>streamKnowledgeSearch</invocationTarget>
+            <invocationTargetType>standardInvocableAction</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+            <masterLabel>Answer Questions with Knowledge</masterLabel>
+            <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+            <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+        </localActions>
+        <localActions>
+            <fullName>Send_Verification_Code_179oB000000QZtO</fullName>
+            <description>Send Verification Code for User verification</description>
+            <developerName>Send_Verification_Code_179oB000000QZtO</developerName>
+            <invocationTarget>Send_Verification_Code</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Send_Verification_Code</localDeveloperName>
+            <masterLabel>Send Verification Code</masterLabel>
+        </localActions>
+        <localDeveloperName>Maintenance_Support</localDeveloperName>
+        <masterLabel>Maintenance Support</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16joB000000CyGX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16joB000000CyGX</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179oB000000QZtN</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000QZtN</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Tenant Concierge Agent</masterLabel>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <outboundRouteConfigs>
+            <escalationMessage>Adding human agent please wait...</escalationMessage>
+            <outboundRouteName>Route_Work_to_Human_Agent</outboundRouteName>
+            <outboundRouteType>OmniChannelFlow</outboundRouteType>
+        </outboundRouteConfigs>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

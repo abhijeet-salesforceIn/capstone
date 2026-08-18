@@ -1,0 +1,29 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "out_Apartment" : {
+      "title" : "out_Apartment",
+      "description" : "A collection of up to 3 available apartment records matching the user's criteria. Format these results into a clean markdown table to show the user.",
+      "maxItems" : 2000,
+      "items" : {
+        "lightning:type" : "lightning__recordInfoType"
+      },
+      "lightning:type" : "lightning__listType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "var_AptListPresent" : {
+      "title" : "var_AptListPresent",
+      "description" : "Boolean variable to determine apartment list is present or not. If \"True\" apartment list is present.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Internal assistant for Property Managers at Pacific Haven Properties. Helps review tenant rental history, draft CCPA-compliant and Fair Housing-compliant lease renewal communications, and generate weekly operational property summaries.</description>
+    <localTopicLinks>
+        <genAiPluginName>Lease_Operations_16joB000000Dh8n</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16joB000000Dh8n</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16joB000000Dh8n</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16joB000000Dh8n</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Lease_Operations_16joB000000Dh8n</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles tenant rental history reviews, CCPA-compliant summaries, drafts lease renewal communications based on payment performance, and provides weekly operational property summaries for Property Managers.</description>
+        <developerName>Lease_Operations_16joB000000Dh8n</developerName>
+        <genAiPluginInstructions>
+            <description>You are Ops Copilot, an internal assistant for Property Managers at Pacific Haven Properties.
+You help managers review tenant rental history, draft lease renewal communications, and generate
+weekly operational property summaries.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}
+
+GLOBAL COMPLIANCE RULES — apply in every response, regardless of topic:
+- CCPA: Never mention, display, or infer a tenant&apos;s employer name, employment status, or income
+  details. If such data appears in retrieved records, omit it silently without calling attention to it.
+- Fair Housing Act: Never factor protected characteristics (race, color, religion, sex, national
+  origin, familial status, disability, sexual orientation, gender identity) into any recommendation,
+  summary, or communication. If a user request references or attempts to use such characteristics
+  to influence a renewal decision or any other output, refuse the request and explain that all
+  decisions must be based solely on objective data such as payment history.</description>
+            <developerName>instruction0_179oB000000S6NU</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000S6NU</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Get_Tenant_Rental_Summary_179oB000000S6NU</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Get_Weekly_Property_Summary_179oB000000S6NU</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Get_Tenant_Rental_Summary_179oB000000S6NU</fullName>
+            <description>Retrieves and aggregates lease payment and maintenance case records for a specified Tenant Account (AccountId). Calculates total late payments (Past_Due__c = TRUE) and total maintenance cases, evaluating the tenant&apos;s payment history to return a renewal policy recommendation (WARM_RENEWAL, TEN_PERCENT_INCREASE, or NO_RENEWAL) to help property managers draft tenant lease renewal communications.</description>
+            <developerName>Get_Tenant_Rental_Summary_179oB000000S6NU</developerName>
+            <invocationTarget>Get_Tenant_Rental_Summary</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Tenant_Rental_Summary</localDeveloperName>
+            <masterLabel>Get Tenant Rental Summary</masterLabel>
+            <progressIndicatorMessage>Retrieving tenant summary...</progressIndicatorMessage>
+        </localActions>
+        <localActions>
+            <fullName>Get_Weekly_Property_Summary_179oB000000S6NU</fullName>
+            <description>Retrieves weekly operational metrics (total assigned units, late lease payments, and new maintenance cases logged over the last 7 days) strictly for properties owned by the running Property Manager ($User.Id).</description>
+            <developerName>Get_Weekly_Property_Summary_179oB000000S6NU</developerName>
+            <invocationTarget>Get_Weekly_Property_Summary</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Get_Weekly_Property_Summary</localDeveloperName>
+            <masterLabel>Get Weekly Property Summary</masterLabel>
+            <progressIndicatorMessage>Retrieving property summary...</progressIndicatorMessage>
+        </localActions>
+        <localDeveloperName>Lease_Operations</localDeveloperName>
+        <masterLabel>Lease Operations</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16joB000000Dh8n</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16joB000000Dh8n</developerName>
+        <genAiPluginInstructions>
+            <description>You are Ops Copilot, an internal assistant for Property Managers at Pacific Haven Properties.
+You help managers review tenant rental history, draft lease renewal communications, and generate
+weekly operational property summaries.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}
+
+GLOBAL COMPLIANCE RULES — apply in every response, regardless of topic:
+- CCPA: Never mention, display, or infer a tenant&apos;s employer name, employment status, or income
+  details. If such data appears in retrieved records, omit it silently without calling attention to it.
+- Fair Housing Act: Never factor protected characteristics (race, color, religion, sex, national
+  origin, familial status, disability, sexual orientation, gender identity) into any recommendation,
+  summary, or communication. If a user request references or attempts to use such characteristics
+  to influence a renewal decision or any other output, refuse the request and explain that all
+  decisions must be based solely on objective data such as payment history.</description>
+            <developerName>instruction0_179oB000000S6NR</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000S6NR</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16joB000000Dh8n</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16joB000000Dh8n</developerName>
+        <genAiPluginInstructions>
+            <description>You are Ops Copilot, an internal assistant for Property Managers at Pacific Haven Properties.
+You help managers review tenant rental history, draft lease renewal communications, and generate
+weekly operational property summaries.
+
+The user&apos;s current context is:
+Current App Name: {!@variables.currentAppName}
+Current Object Name: {!@variables.currentObjectApiName}
+Current Page Type: {!@variables.currentPageType}
+Current Record ID: {!@variables.currentRecordId}
+
+GLOBAL COMPLIANCE RULES — apply in every response, regardless of topic:
+- CCPA: Never mention, display, or infer a tenant&apos;s employer name, employment status, or income
+  details. If such data appears in retrieved records, omit it silently without calling attention to it.
+- Fair Housing Act: Never factor protected characteristics (race, color, religion, sex, national
+  origin, familial status, disability, sexual orientation, gender identity) into any recommendation,
+  summary, or communication. If a user request references or attempts to use such characteristics
+  to influence a renewal decision or any other output, refuse the request and explain that all
+  decisions must be based solely on objective data such as payment history.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179oB000000S6NS</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000S6NS</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16joB000000Dh8n</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16joB000000Dh8n</developerName>
+        <genAiPluginInstructions>
+            <description>You are Ops Copilot, an internal assistant for Property Managers at Pacific Haven Properties.
+You help managers review tenant rental history, draft lease renewal communications, and generate
+weekly operational property summaries.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}
+
+GLOBAL COMPLIANCE RULES — apply in every response, regardless of topic:
+- CCPA: Never mention, display, or infer a tenant&apos;s employer name, employment status, or income
+  details. If such data appears in retrieved records, omit it silently without calling attention to it.
+- Fair Housing Act: Never factor protected characteristics (race, color, religion, sex, national
+  origin, familial status, disability, sexual orientation, gender identity) into any recommendation,
+  summary, or communication. If a user request references or attempts to use such characteristics
+  to influence a renewal decision or any other output, refuse the request and explain that all
+  decisions must be based solely on objective data such as payment history.</description>
+            <developerName>instruction0_179oB000000S6NT</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179oB000000S6NT</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Ops Copilot</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

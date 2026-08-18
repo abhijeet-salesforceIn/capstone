@@ -1,0 +1,56 @@
+{
+  "required" : [ "searchText" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "searchText" : {
+      "title" : "Search Text",
+      "description" : "A string containing general terms for the search.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "resultCount" : {
+      "title" : "Result Count",
+      "description" : "(Optional) The maximum number of top results to return.The default value is 10. For example, if Result Count is set to 5 and there are more than 5 results that meet the specified criteria, then only the top 5 results are returned.",
+      "lightning:type" : "lightning__integerType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "retrievalMode" : {
+      "title" : "Retrieval Mode",
+      "description" : "Retrieval mode. Optional, if not specified, default to Basic.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "enableCitations" : {
+      "title" : "Citations",
+      "description" : "Enable or disable citations. Optional, if not specified, default to true.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "locale" : {
+      "title" : "Locale",
+      "description" : "Optional locale filter",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "clientName" : {
+      "title" : "Client Name",
+      "description" : "(Optional) Set a unique client name to track activity and usage for the calling client.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "clientTraceId" : {
+      "title" : "Client Trace Id",
+      "description" : "(Optional) Set a client-defined trace id for tracking the request from the calling client.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

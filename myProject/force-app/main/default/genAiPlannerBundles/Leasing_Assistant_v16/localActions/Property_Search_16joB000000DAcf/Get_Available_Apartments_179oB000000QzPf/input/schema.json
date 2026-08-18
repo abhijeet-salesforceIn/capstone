@@ -1,0 +1,30 @@
+{
+  "required" : [ "var_Bedrooms", "var_City", "var_MaxRent" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_Bedrooms" : {
+      "title" : "var_Bedrooms",
+      "description" : "The number of bedrooms the user is looking for.",
+      "multipleOf" : 1.0E-34,
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_City" : {
+      "title" : "var_City",
+      "description" : "The city where the user wants to rent an apartment",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_MaxRent" : {
+      "title" : "var_MaxRent",
+      "description" : "The maximum monthly rent the user is willing to pay.",
+      "lightning:type" : "lightning__currencyType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

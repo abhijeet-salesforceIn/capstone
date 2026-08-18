@@ -1,0 +1,24 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "out_DiscountAmount" : {
+      "title" : "out_DiscountAmount",
+      "description" : "The exact dollar amount of the rent discount available. Only valid if out_DiscountPresent is TRUE",
+      "lightning:type" : "lightning__currencyType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "out_DiscountPresent" : {
+      "title" : "out_DiscountPresent",
+      "description" : "Boolean that returns TRUE if an active discount is found for the specified criteria, and FALSE if no discount exists.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

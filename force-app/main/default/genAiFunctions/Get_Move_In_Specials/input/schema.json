@@ -1,0 +1,21 @@
+{
+  "required" : [ "var_Bedroom", "var_City" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "var_Bedroom" : {
+      "title" : "var_Bedroom",
+      "description" : "The desired number of bedrooms the prospect is looking for",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "var_City" : {
+      "title" : "var_City",
+      "description" : "The preferred city the prospect is asking about",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

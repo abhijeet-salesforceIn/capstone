@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Returns information from a retriever associated with a file based data library.</description>
+    <developerName>File_PACIFIC_HAVEN_PROPERTIES_HANDBOOK</developerName>
+    <invocationTarget>File_PACIFIC_HAVEN_PROPERTIES_HANDBOOK_1Cx_IQ67649c0d5</invocationTarget>
+    <invocationTargetType>retriever</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>File_PACIFIC_HAVEN_PROPERTIES_HANDBOOK</localDeveloperName>
+    <masterLabel>Get Information from PACIFIC_HAVEN_PROPERTIES_HANDBOOK</masterLabel>
+    <progressIndicatorMessage>Getting information...</progressIndicatorMessage>
+</GenAiFunction>

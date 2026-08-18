@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Field_Generation_UIAutomation_Prompt_Template_UsedInFlow_Smoke_TAM</developerName>
+    <masterLabel>Field_Generation_UIAutomation_Prompt_Template_UsedInFlow_Smoke_TAM</masterLabel>
+    <overridable>false</overridable>
+    <relatedEntity>Contact</relatedEntity>
+    <relatedField>Contact.AssistantName</relatedField>
+    <templateVersions>
+        <content>{!$Input:Contact.Name}
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <isCitationEnabled>false</isCitationEnabled>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>z8zhhSMY7Sthkkhx9KKFMZ4095j82YtpfK28Gzg2EJ8=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>Explain the account : {!$Input:Contact.Name}
+</content>
+        <inputs>
+            <apiName>RelatedEntity</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <referenceName>Input:Contact</referenceName>
+            <required>true</required>
+        </inputs>
+        <isCitationEnabled>false</isCitationEnabled>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <versionIdentifier>z8zhhSMY7Sthkkhx9KKFMZ4095j82YtpfK28Gzg2EJ8=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__fieldCompletion</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
