@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <version>62.0</version>
+
+    <!-- Agentforce Bots -->
+    <types>
+        <members>Copilot_for_Salesforce</members>
+        <members>Leasing_Assistant</members>
+        <members>Ops_Copilot</members>
+        <members>Tenant_Concierge_Agent</members>
+        <name>Bot</name>
+    </types>
+
+    <!-- GenAI Planner Bundles (Agent Definitions) -->
+    <types>
+        <members>EmployeeCopilotPlanner</members>
+        <members>Leasing_Assistant_v22</members>
+        <members>Ops_Copilot_v9</members>
+        <members>Tenant_Concierge_Agent_v36</members>
+        <name>GenAiPlannerBundle</name>
+    </types>
+
+    <!-- GenAI Functions (Agent Actions) -->
+    <types>
+        <members>Create_Lead_Record</members>
+        <members>File_PACIFIC_HAVEN_PROPERTIES_HANDBOOK</members>
+        <members>Get_Available_Apartments</members>
+        <members>Get_Move_In_Specials</members>
+        <name>GenAiFunction</name>
+    </types>
+
+    <!-- GenAI Prompt Templates -->
+    <types>
+        <members>AccountDescriptionFieldGen_PT</members>
+        <members>Field_Generation_UIAutomation_Prompt_Template_Smoke_TAM</members>
+        <members>Field_Generation_UIAutomation_Prompt_Template_UsedInFlow_Smoke_TAM</members>
+        <members>Flex_UIAutomation_Agentforce_Prompt_Template_Account_Contact</members>
+        <name>GenAiPromptTemplate</name>
+    </types>
+
+    <!-- Flows -->
+    <types>
+        <members>Agent_Route_to_Work</members>
+        <members>Create_Lead_Record</members>
+        <members>Create_Maintenance_Case</members>
+        <members>Field_Generation_Flow</members>
+        <members>Get_Available_Apartments</members>
+        <members>Get_Move_In_Specials</members>
+        <members>Get_Tenant_Rental_Summary</members>
+        <members>Get_Weekly_Property_Summary</members>
+        <members>Order_Keyfob_Replacement</members>
+        <members>Route_Work_to_Human_Agent</members>
+        <members>Sales_Email_Flow</members>
+        <members>Send_Verification_Code</members>
+        <members>SimpleNumberFlow</members>
+        <members>Tenant_Agent_Route_to_Work</members>
+        <members>Verify_Customer_Code</members>
+        <members>get_case_by_id</members>
+        <name>Flow</name>
+    </types>
+
+    <!-- Apex Classes -->
+    <types>
+        <members>ASimpleCtrlObjectApexForActionTest</members>
+        <members>ApexResponseBody</members>
+        <members>ApexResponseCustom</members>
+        <members>CaseEmail</members>
+        <members>ChangePasswordController</members>
+        <members>ChangePasswordControllerTest</members>
+        <members>CommunitiesLandingController</members>
+        <members>CommunitiesLandingControllerTest</members>
+        <members>CommunitiesLoginController</members>
+        <members>CommunitiesLoginControllerTest</members>
+        <members>CommunitiesSelfRegConfirmController</members>
+        <members>CommunitiesSelfRegConfirmControllerTest</members>
+        <members>CommunitiesSelfRegController</members>
+        <members>CommunitiesSelfRegControllerTest</members>
+        <members>FieldGenCaller</members>
+        <members>FieldGenerationApexClass</members>
+        <members>FlexApexClass</members>
+        <members>FoodOptionsServiceNew</members>
+        <members>ForgotPasswordController</members>
+        <members>ForgotPasswordControllerTest</members>
+        <members>GetFoodDetailsInvocable</members>
+        <members>KnowledgeAnswersCaller</members>
+        <members>LightningForgotPasswordController</members>
+        <members>LightningForgotPasswordControllerTest</members>
+        <members>LightningLoginFormController</members>
+        <members>LightningLoginFormControllerTest</members>
+        <members>LightningSelfRegisterController</members>
+        <members>LightningSelfRegisterControllerTest</members>
+        <members>MicrobatchSelfRegController</members>
+        <members>MicrobatchSelfRegControllerTest</members>
+        <members>MyProfilePageController</members>
+        <members>MyProfilePageControllerTest</members>
+        <members>SimpleCtrl</members>
+        <members>SiteLoginController</members>
+        <members>SiteLoginControllerTest</members>
+        <members>SiteRegisterController</members>
+        <members>SiteRegisterControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+
+    <!-- Custom Objects -->
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Custom Fields -->
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+
+</Package>

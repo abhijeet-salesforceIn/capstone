@@ -1,0 +1,22 @@
+# Salesforce cache
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
+
+# Dependency directories
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+$RECYCLE.BIN/
+
+# Local environment variables
+.env
