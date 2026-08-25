@@ -113,4 +113,36 @@
         <name>CustomField</name>
     </types>
 
+    <!-- Permission Sets -->
+    <types>
+        <members>Capstone_agent_User</members>
+        <members>Leasing_Assistant958246293_Permissions</members>
+        <members>Ops_Copilot2011348163_Permissions</members>
+        <members>Tenant_Concierge1887333542_Permissions</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Messaging Channels (Omnichannel chat channels) -->
+    <types>
+        <members>Enhanced_Chat_Cap</members>
+        <members>Enhanced_Chat</members>
+        <name>MessagingChannel</name>
+    </types>
+
+    <!-- Experience Cloud Sites -->
+    <types>
+        <members>ESW_Enhanced_Chat_Cap_17853212204101</members>
+        <members>ESW_PHP_Leasing_Chat_17848857763791</members>
+        <members>Pacific_Haven_Properties1</members>
+        <name>ExperienceBundle</name>
+    </types>
+
+    <!-- Community / Experience Cloud Networks -->
+    <types>
+        <members>ESW_Enhanced_Chat_Cap_1785321220410</members>
+        <members>ESW_PHP_Leasing_Chat_1784885776379</members>
+        <members>Pacific Haven Properties</members>
+        <name>Network</name>
+    </types>
+
 </Package>
