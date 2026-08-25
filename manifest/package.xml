@@ -145,4 +145,21 @@
         <name>Network</name>
     </types>
 
+    <!-- Org Settings (Agentforce, Omnichannel, Knowledge, Case, Communities) -->
+    <types>
+        <members>AgentPlatform</members>
+        <members>AgentforceForDevelopers</members>
+        <members>Bot</members>
+        <members>Case</members>
+        <members>Communities</members>
+        <members>EinsteinAI</members>
+        <members>EinsteinCopilot</members>
+        <members>EinsteinGpt</members>
+        <members>Knowledge</members>
+        <members>LiveAgent</members>
+        <members>LiveMessage</members>
+        <members>OmniChannel</members>
+        <name>Settings</name>
+    </types>
+
 </Package>
